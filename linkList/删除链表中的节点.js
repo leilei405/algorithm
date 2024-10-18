@@ -25,3 +25,6 @@ while (currentNode) {
   console.log(currentNode.val);
   currentNode = currentNode.next;
 }
+
+// 没有任何循环  时间复杂度为O(1)
+// 没有数组、矩阵  空间复杂度也是O(1)
