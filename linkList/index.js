@@ -2,7 +2,7 @@
  * @Author: leilei405 1601178425@qq.com
  * @Date: 2024-10-17 23:04:09
  * @LastEditors: leilei405 1601178425@qq.com
- * @LastEditTime: 2024-10-17 23:12:14
+ * @LastEditTime: 2024-10-20 17:05:14
  * @FilePath: \algorithm\linkList\index.js
  */
 const a = { val: "a" };
@@ -15,6 +15,9 @@ c.next = d;
 
 // 遍历链表
 let p = a; // 声明指针
+const p1 = p.next.next;
+console.log(p1, "=====");
+
 while (p) {
   console.log(p.val);
   p = p.next;
