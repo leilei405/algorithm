@@ -2,7 +2,7 @@
  * @Author: leilei405 1601178425@qq.com
  * @Date: 2024-10-22 20:21:50
  * @LastEditors: leilei405 1601178425@qq.com
- * @LastEditTime: 2024-10-22 20:45:34
+ * @LastEditTime: 2024-10-22 21:03:39
  * @FilePath: \algorithm\Map\无重复字符发的最长子串.js
  */
 
@@ -23,5 +23,6 @@ function lengthOfLongestSubstring(s) {
 
 // 测试
 console.log(lengthOfLongestSubstring("abcabcbb")); // 输出: 3
+// console.log(lengthOfLongestSubstring("abbcdea")); // 输出: 1
 // console.log(lengthOfLongestSubstring("bbbbb")); // 输出: 1
 // console.log(lengthOfLongestSubstring("pwwkew")); // 输出: 3
