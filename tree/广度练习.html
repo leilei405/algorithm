@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        { id: 1, name: "部门A", parentId: 0 },
+        { id: 2, name: "部门B", parentId: 1 },
+        { id: 3, name: "部门C", parentId: 1 },
+        { id: 4, name: "部门D", parentId: 2 },
+        { id: 5, name: "部门E", parentId: 2 },
+        { id: 6, name: "部门F", parentId: 3 },
+      ];
+
+      // 期望输出
+      // const output = [
+      //   {
+      //     id: 1,
+      //     name: "部门A",
+      //     children: [
+      //       {
+      //         id: 2,
+      //         name: "部门B",
+      //         children: [
+      //           {
+      //             id: 4,
+      //             name: "部门D",
+      //             children: [],
+      //           },
+      //           {
+      //             id: 5,
+      //             name: "部门E",
+      //             children: [],
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         id: 3,
+      //         name: "部门C",
+      //         children: [
+      //           {
+      //             id: 6,
+      //             name: "部门F",
+      //             children,
+      //           },
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // ];
+
+      const tree = (arr1 = []) => {
+        const map = new Map();
+        const result = [];
+
+        arr1.forEach((item) => {
+          item.children = [];
+          map.set(item.id, item);
+        });
+
+        arr1.forEach((item) => {
+          const parentNode = map.get(item.parentId);
+          if (parentNode) {
+            parentNode.children.push(item);
+          } else {
+            result.push(item);
+          }
+        });
+
+        return result;
+      };
+      console.log(tree(arr));
+    </script>
+  </body>
+</html>
