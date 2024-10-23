@@ -2,7 +2,7 @@
  * @Author: leilei405 1601178425@qq.com
  * @Date: 2024-10-23 20:53:58
  * @LastEditors: leilei405 1601178425@qq.com
- * @LastEditTime: 2024-10-23 21:20:49
+ * @LastEditTime: 2024-10-23 21:58:32
  * @FilePath: \algorithm\tree\二叉树先序遍历.html
 -->
 <!DOCTYPE html>
@@ -22,7 +22,25 @@
         inOrder(tree.right);
       };
 
-      inOrder(data);
+      // inOrder(data);
+
+      // 非递归版的中序遍历
+      const inOrder2 = (tree) => {
+        if (!tree) return;
+        const stack = [];
+        let p = tree;
+        while (stack.length || p) {
+          while (p) {
+            stack.push(p);
+            p = p.left;
+          }
+          const n = stack.pop();
+          console.log(n.val);
+          p = n.right;
+        }
+      };
+
+      inOrder2(data);
     </script>
   </body>
 </html>

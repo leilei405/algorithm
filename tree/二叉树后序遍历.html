@@ -16,6 +16,26 @@
       };
 
       postOrder(data);
+
+      // 非递归版的后序遍历
+      const postOrder2 = (tree) => {
+        if (!tree) return;
+        const stack = [tree];
+        const outputStack = [];
+        while (stack.length) {
+          const node = stack.pop();
+          outputStack.push(node);
+          if (node.left) stack.push(node.left);
+          if (node.right) stack.push(node.right);
+        }
+
+        while (outputStack.length) {
+          const n = outputStack.pop();
+          console.log(n.val);
+        }
+      };
+
+      postOrder2(data);
     </script>
   </body>
 </html>
