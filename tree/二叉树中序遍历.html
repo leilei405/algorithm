@@ -1,0 +1,28 @@
+<!--
+ * @Author: leilei405 1601178425@qq.com
+ * @Date: 2024-10-23 20:53:58
+ * @LastEditors: leilei405 1601178425@qq.com
+ * @LastEditTime: 2024-10-23 21:20:49
+ * @FilePath: \algorithm\tree\二叉树先序遍历.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二叉树中序遍历</title>
+    <script src="./data.js"></script>
+  </head>
+  <body>
+    <script>
+      const inOrder = (tree) => {
+        if (!tree) return;
+        inOrder(tree.left);
+        console.log(tree.val);
+        inOrder(tree.right);
+      };
+
+      inOrder(data);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二叉树后序遍历</title>
+    <script src="./data.js"></script>
+  </head>
+  <body>
+    <script>
+      const postOrder = (tree) => {
+        if (!tree) return;
+        postOrder(tree.left);
+        postOrder(tree.right);
+        console.log(tree.val);
+      };
+
+      postOrder(data);
+    </script>
+  </body>
+</html>
