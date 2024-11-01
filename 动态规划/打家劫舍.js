@@ -2,7 +2,7 @@
  * @Author: leilei405 1601178425@qq.com
  * @Date: 2024-11-01 21:33:07
  * @LastEditors: leilei405 1601178425@qq.com
- * @LastEditTime: 2024-11-01 21:35:00
+ * @LastEditTime: 2024-11-01 21:35:29
  * @FilePath: \algorithm\动态规划\打家劫舍.js
  */
 var rob = function (nums) {
